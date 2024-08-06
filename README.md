@@ -31,5 +31,5 @@ flutter build ios --release --flavor prod -t lib/config/main_prod.dart
 
 Generate api generator file through below command
 flutter pub run build_runner build --delete-conflicting-outputs
-# OR
+OR
 dart run build_runner build -d
