@@ -35,9 +35,7 @@ abstract class BaseBlocWidgetState<T extends BaseBlocWidget>
                 hideDialog();
                 showToast(state.message!);
               } else if (state is ApiLoadingState) {
-                print("asdfasfdasfd--------------------");
                 if (!isDialogShowing && ModalRoute.of(context)!.isCurrent) {
-                  print("asdfasfdasfd22222--------------------");
                   showDialogView();
                 }
               } else if (state is ApiLoadedState && isDialogShowing) {
@@ -54,11 +52,9 @@ abstract class BaseBlocWidgetState<T extends BaseBlocWidget>
   void onBackPressed() => goBack(context, route: runtimeType.toString());
 
   Future<void> showDialogView() async {
-    print("dfdf $isDialogShowing");
     if (isDialogShowing) {
       return;
     }
-    print("dfdf333 $isDialogShowing");
     isDialogShowing = true;
     await loadingDialog(
       context: context,

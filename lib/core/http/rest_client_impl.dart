@@ -1,8 +1,6 @@
 import 'package:dio/dio.dart';
 
 import '../../config/flavor_config.dart';
-import '../../di/injection_container.dart';
-import '../preference/pref_helper.dart';
 import 'api_constants.dart';
 import 'rest_client.dart';
 import 'rest_helper.dart';
@@ -30,8 +28,10 @@ class RestClientImpl implements RestClient {
     //
     // dioClient.options.headers = headersMap;
 
-    dioClient.options.connectTimeout = const Duration(milliseconds: API_CONNECT_TIMEOUT);
-    dioClient.options.receiveTimeout = const Duration(milliseconds: RECEIVE_TIMEOUT);
+    dioClient.options.connectTimeout =
+        const Duration(milliseconds: API_CONNECT_TIMEOUT);
+    dioClient.options.receiveTimeout =
+        const Duration(milliseconds: RECEIVE_TIMEOUT);
     return RestHelper(dioClient);
   }
 

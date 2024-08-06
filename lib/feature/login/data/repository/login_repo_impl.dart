@@ -3,12 +3,10 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/http/network_info.dart';
 import '../../../../core/models/failure.dart';
 import '../../../../core/models/success.dart';
-import '../../../../core/preference/pref_helper.dart';
 import '../../../../di/injection_container.dart';
 import '../../domain/login_repo.dart';
 import '../data_source/remote_login_data_source.dart';
 import '../models/login_request_model.dart';
-import '../models/login_response_model.dart';
 
 class LoginRepoImpl extends LoginRepo {
   RemoteLoginDataSource remoteLoginDataSource = sl();
